@@ -7,7 +7,16 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="" alt="JOJOS Logo" width={150} height={50} />
+          <div className={styles.logoContent}>
+            <Image src="/icon.png" alt="JOJOS Logo" width={72} height={50} />
+            <h1>
+              <span className={styles.letter1}>J</span>
+              <span className={styles.letter2}>O</span>
+              <span className={styles.letter3}>J</span>
+              <span className={styles.letter4}>O</span>
+              <span className={styles.letter5}>S</span>
+            </h1>
+          </div>
         </Link>
       </div>
       <nav className={styles.nav}>
