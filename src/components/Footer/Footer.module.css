@@ -3,9 +3,14 @@
     background-color: #023047;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: .75rem;
     position: fixed;
     width: 100vw;
     bottom: 0;
+    border-top: 1px solid #fff;
+    opacity: 0.7;
   }
-  
+
+.footer p {
+  font-size: 14px;
+}
