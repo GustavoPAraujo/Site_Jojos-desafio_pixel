@@ -1,7 +1,27 @@
+"use client";
+
 import client, { urlFor } from '../../sanity';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-const Blog = ({ posts }) => {
+const Blog = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const query = `*[_type == "post"]{
+        title,
+        slug,
+        mainImage,
+        excerpt
+      }`;
+      const posts = await client.fetch(query);
+      setPosts(posts);
+    };
+
+    fetchPosts();
+  }, []);
+
   return (
     <div>
       <header>
@@ -37,22 +57,5 @@ const Blog = ({ posts }) => {
     </div>
   );
 };
-
-export async function getStaticProps() {
-  const query = `*[_type == "post"]{
-    title,
-    slug,
-    mainImage,
-    excerpt
-  }`;
-  const posts = await client.fetch(query);
-
-  return {
-    props: {
-      posts,
-    },
-    revalidate: 60,
-  };
-}
 
 export default Blog;
