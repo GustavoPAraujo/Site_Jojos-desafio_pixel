@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
+import Footer from '@/components/Footer/Footer';
+
 const Formulario = () => {
   const [submitted, setSubmitted] = useState(false);
 
@@ -53,9 +55,7 @@ const Formulario = () => {
         )}
       </main>
 
-      <footer>
-        <p>&copy; 2024 JOJOS GAME STUDIOS. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,8 @@
 
 import Link from 'next/link';
 
+import Footer from '@/components/Footer/Footer';
+
 export default function Home() {
 
   return (
@@ -45,9 +47,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2024 JOJOS GAME STUDIOS. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

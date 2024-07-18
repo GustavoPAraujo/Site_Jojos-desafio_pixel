@@ -2,6 +2,8 @@ import client, { urlFor } from '../../../sanity';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+import Footer from '@/components/Footer/Footer';
+
 const Post = ({ post }) => {
   const router = useRouter();
   if (router.isFallback) {
@@ -26,9 +28,7 @@ const Post = ({ post }) => {
         <div>{post.body}</div>
       </main>
 
-      <footer>
-        <p>&copy; 2024 JOJOS GAME STUDIOS. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
