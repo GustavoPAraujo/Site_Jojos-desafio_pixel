@@ -1,11 +1,8 @@
 .footer {
-  display: flex;
-  justify-content: center;
-   margin: 0;
   background-color: #023047;
   color: white;
   text-align: center;
-  padding: .75rem;
+  padding: 0.75rem;
   width: 100%;
   border-top: 1px solid #fff;
   opacity: 0.7;
@@ -14,4 +11,3 @@
 .footer p {
   font-size: 14px;
 }
-
