@@ -7,10 +7,10 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <Image src="/logo.png" alt="JOJOS Logo" width={150} height={50} />
+          <Image src="" alt="JOJOS Logo" width={150} height={50} />
         </Link>
       </div>
-      <nav>
+      <nav className={styles.nav}>
         <Link href="/jogos" className={styles.navLink}>Jogos</Link>
         <Link href="/sobre" className={styles.navLink}>Sobre</Link>
         <Link href="/blog" className={styles.navLink}>Blog</Link>

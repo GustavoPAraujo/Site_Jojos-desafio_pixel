@@ -5,6 +5,8 @@
     text-align: center;
     padding: .75rem;
     position: fixed;
+    left: 0;
+    right: 0;
     width: 100vw;
     bottom: 0;
     border-top: 1px solid #fff;
