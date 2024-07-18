@@ -1,9 +1,12 @@
 import sanityClient from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
+console.log("Sanity Project ID:", process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
+console.log("Sanity Dataset:", process.env.NEXT_PUBLIC_SANITY_DATASET);
+
 const client = sanityClient({
-  projectId: '0dqt029n', // Substitua pelo seu ID de projeto Sanity
-  dataset: 'production', // Substitua pelo seu dataset
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   useCdn: true, // `false` se você quiser garantir dados frescos
 });
 
