@@ -37,17 +37,19 @@ const Blog = () => {
       <main>
         <h1>Blog</h1>
         <div>
-          {posts.map((post) => (
-            <div key={post.slug.current}>
-              <Link href={`/blog/${post.slug.current}`}>
-                <a>
+          {posts.length > 0 ? (
+            posts.map((post) => (
+              <div key={post.slug.current}>
+                <Link href={`/blog/${post.slug.current}`}>
                   <img src={urlFor(post.mainImage).url()} alt={post.title} />
                   <h2>{post.title}</h2>
                   <p>{post.excerpt}</p>
-                </a>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))
+          ) : (
+            <p>Nenhum post encontrado.</p>
+          )}
         </div>
       </main>
 
