@@ -4,6 +4,8 @@ import client, { urlFor } from '../../sanity';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+import Header from '@/components/Header/Header';
+
 const Blog = () => {
   const [posts, setPosts] = useState([]);
 
@@ -24,15 +26,7 @@ const Blog = () => {
 
   return (
     <div>
-      <header>
-        <h1>JOJOS</h1>
-        <nav>
-          <Link href="/jogos">Jogos</Link>
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/formulario">Carreira</Link>
-        </nav>
-      </header>
+      <Header />
 
       <main>
         <h1>Blog</h1>
