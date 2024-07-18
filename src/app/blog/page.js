@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -47,9 +48,8 @@ const Blog = () => {
         </div>
       </main>
 
-      <footer>
-        <p>&copy; 2024 JOJOS GAME STUDIOS. All rights reserved.</p>
-      </footer>
+      <Footer />
+      
     </div>
   );
 };
