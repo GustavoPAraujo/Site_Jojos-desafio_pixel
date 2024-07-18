@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 import Footer from '@/components/Footer/Footer';
+import Header from '@/components/Header/Header';
+
 
 const Formulario = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -16,15 +18,7 @@ const Formulario = () => {
 
   return (
     <div>
-      <header>
-        <h1>JOJOS</h1>
-        <nav>
-          <Link href="/jogos">Jogos</Link>
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/formulario">Carreira</Link>
-        </nav>
-      </header>
+      <Header />
 
       <main>
         {submitted ? (

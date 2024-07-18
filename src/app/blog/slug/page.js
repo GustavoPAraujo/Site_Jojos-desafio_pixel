@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import Footer from '@/components/Footer/Footer';
+import Header from '@/components/Header/Header';
+
 
 const Post = ({ post }) => {
   const router = useRouter();
@@ -12,15 +14,7 @@ const Post = ({ post }) => {
 
   return (
     <div>
-      <header>
-        <h1>JOJOS</h1>
-        <nav>
-          <Link href="/jogos">Jogos</Link>
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/formulario">Carreira</Link>
-        </nav>
-      </header>
+      <Header />
 
       <main>
         <h1>{post.title}</h1>
