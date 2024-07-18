@@ -1,4 +1,7 @@
+"use client";
+
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Formulario = () => {
   const [submitted, setSubmitted] = useState(false);
