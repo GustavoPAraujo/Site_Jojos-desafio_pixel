@@ -5,7 +5,8 @@
 }
 
 .main {
-    padding: 20px;
+    flex: 1;
+    padding: 40px;
     padding-top: 0;
 }
 
@@ -17,6 +18,8 @@
 .postsGrid {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1300px;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0 auto;
 }
