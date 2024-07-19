@@ -20,8 +20,5 @@
 
 .postBody {
     line-height: 1.6;
+    font-size: 18px;
 }
-
-.postBody p {
-    margin-bottom: 20px; /* Ajusta o espaçamento entre os parágrafos */
-  }

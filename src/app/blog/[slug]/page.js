@@ -1,10 +1,7 @@
 import client, { urlFor } from '../../../sanity';
-
 import { PortableText } from '@portabletext/react';
-
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
-
 import styles from './BlogSlug.module.css';
 
 async function getData(slug) {
@@ -39,7 +36,14 @@ const BlogSlug = async ({ params }) => {
           <p>Por {post.author.name}, {new Date(post.publishedAt).toLocaleDateString()}</p>
         </div>
         <div className={styles.postBody}>
-          <PortableText value={post.body} />
+          <PortableText 
+            value={post.body} 
+            components={{
+              block: {
+                normal: ({ children }) => <p>{children}</p>,
+              },
+            }}
+          />
         </div>
       </main>
       <Footer />
