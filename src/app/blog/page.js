@@ -1,7 +1,8 @@
 "use client";
 
-import client from '../../sanity';
+import client, { urlFor } from '../../sanity';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
@@ -11,6 +12,7 @@ import styles from './Blog.module.css';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
+  const [highlightedPost, setHighlightedPost] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -21,6 +23,9 @@ const Blog = () => {
       }`;
       const posts = await client.fetch(query);
       setPosts(posts);
+      if (posts.length > 0) {
+        setHighlightedPost(posts[0]); // Define o primeiro post como destaque
+      }
     };
 
     fetchPosts();
@@ -31,9 +36,19 @@ const Blog = () => {
       <Header />
       <main className={styles.main}>
         <h1 className={styles.blogTitle}>Blog</h1>
+        {highlightedPost && (
+          <Link href={`/blog/${highlightedPost.slug.current}`}>
+            <div className={styles.highlightedPost}>
+              <img src={urlFor(highlightedPost.mainImage).url()} alt={highlightedPost.title} className={styles.highlightedPostImage} />
+              <div className={styles.highlightedPostContent}>
+                <h2>{highlightedPost.title}</h2>
+              </div>
+            </div>
+          </Link>
+        )}
         <div className={styles.postsGrid}>
           {posts.length > 0 ? (
-            posts.map((post) => (
+            posts.slice(1).map((post) => (
               <PostCard key={post.slug.current} post={post} />
             ))
           ) : (
