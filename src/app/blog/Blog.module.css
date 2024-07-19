@@ -26,9 +26,13 @@
 
 .highlightedPost {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+
   }
 
   .highlightedPostImage {
