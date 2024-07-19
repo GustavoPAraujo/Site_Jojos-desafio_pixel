@@ -1,12 +1,27 @@
 
-
-
 .main {
     flex: 1;
-    padding: 40px;
+    padding: 60px;
     padding-top: 0;
 }
 
 .postImage {
     width: 100%;
 }
+
+.postMeta {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.postMeta p {
+    font-size: 14px;
+}
+
+.postBody {
+    line-height: 1.6;
+}
+
+.postBody p {
+    margin-bottom: 20px; /* Ajusta o espaçamento entre os parágrafos */
+  }
