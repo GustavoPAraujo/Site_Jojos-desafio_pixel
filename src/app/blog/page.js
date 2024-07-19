@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import PostCard from '@/components/PostCard/PostCard';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -34,13 +35,7 @@ const Blog = () => {
         <div>
           {posts.length > 0 ? (
             posts.map((post) => (
-              <div key={post.slug.current}>
-                <Link href={`/blog/${post.slug.current}`}>
-                  <img src={urlFor(post.mainImage).url()} alt={post.title} />
-                  <h2>{post.title}</h2>
-                  <p>{post.excerpt}</p>
-                </Link>
-              </div>
+              <PostCard key={post.slug.current} post={post} />
             ))
           ) : (
             <p>Nenhum post encontrado.</p>
@@ -49,7 +44,7 @@ const Blog = () => {
       </main>
 
       <Footer />
-      
+
     </div>
   );
 };
