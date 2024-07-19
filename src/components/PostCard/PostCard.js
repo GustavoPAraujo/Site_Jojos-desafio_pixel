@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { urlFor } from '../../../sanity';
-
+import { urlFor } from '../../sanity';
 import styles from './PostCard.module.css';
 
 const PostCard = ({ post }) => {
