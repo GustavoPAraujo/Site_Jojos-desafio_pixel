@@ -1,8 +1,9 @@
 "use client";
 
 import client, { urlFor } from '../../sanity';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
+import styles from './Blog.module.css'
 
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
@@ -27,12 +28,16 @@ const Blog = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
       <Header />
 
-      <main>
-        <h1>Blog</h1>
+      <main className={styles.main}>
+        <h1 className={styles.blogTitle}>Blog</h1>
         <div>
+
+        </div>
+
+        <div className={styles.postsGrid}>
           {posts.length > 0 ? (
             posts.map((post) => (
               <PostCard key={post.slug.current} post={post} />
