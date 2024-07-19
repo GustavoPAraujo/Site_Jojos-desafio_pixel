@@ -1,7 +1,9 @@
 import client, { urlFor } from '../../../sanity';
 import { PortableText } from '@portabletext/react';
+
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+
 import styles from './BlogSlug.module.css';
 
 async function getData(slug) {

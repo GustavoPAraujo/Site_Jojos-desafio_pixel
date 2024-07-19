@@ -43,5 +43,14 @@
 
   .highlightedPostContent {
     padding: 20px;
-    text-align: center;
+    text-align: left;
+  }
+
+  .highlightedPostContent h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  .highlightedPostContent p {
+    font-size: 14px;
   }
