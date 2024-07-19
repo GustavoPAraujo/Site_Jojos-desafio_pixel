@@ -24,8 +24,8 @@ const BlogSlug = async ({ params }) => {
     <div className={styles.pageContainer}>
       <Header />
       <main className={styles.main}>
-        <h1 className={styles.postTitle}>{post.title}</h1>
         <img src={urlFor(post.mainImage).url()} alt={post.title} className={styles.postImage} />
+        <h2 className={styles.postTitle}>{post.title}</h2>
         <div className={styles.postBody}>
           <PortableText value={post.body} />
         </div>

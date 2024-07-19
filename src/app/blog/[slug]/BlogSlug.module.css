@@ -1,0 +1,12 @@
+
+
+
+.main {
+    flex: 1;
+    padding: 40px;
+    padding-top: 0;
+}
+
+.postImage {
+    width: 100%;
+}
