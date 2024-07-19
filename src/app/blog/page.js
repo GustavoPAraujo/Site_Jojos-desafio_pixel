@@ -1,13 +1,13 @@
 "use client";
 
-import client, { urlFor } from '../../sanity';
+import client from '../../sanity';
 import { useEffect, useState } from 'react';
-
-import styles from './Blog.module.css'
 
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import PostCard from '@/components/PostCard/PostCard';
+
+import styles from './Blog.module.css';
 
 const Blog = () => {
   const [posts, setPosts] = useState([]);
@@ -17,8 +17,7 @@ const Blog = () => {
       const query = `*[_type == "post"]{
         title,
         slug,
-        mainImage,
-        excerpt
+        mainImage
       }`;
       const posts = await client.fetch(query);
       setPosts(posts);
@@ -30,13 +29,8 @@ const Blog = () => {
   return (
     <div className={styles.pageContainer}>
       <Header />
-
       <main className={styles.main}>
         <h1 className={styles.blogTitle}>Blog</h1>
-        <div>
-
-        </div>
-
         <div className={styles.postsGrid}>
           {posts.length > 0 ? (
             posts.map((post) => (
@@ -47,9 +41,7 @@ const Blog = () => {
           )}
         </div>
       </main>
-
       <Footer />
-
     </div>
   );
 };
