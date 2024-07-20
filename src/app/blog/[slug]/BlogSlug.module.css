@@ -7,17 +7,26 @@
 
 .postImage {
     width: 100%;
-}
-
-.postMeta {
-    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.postMeta p {
-    font-size: 14px;
+.postTitle {
+    font-size: 28px;
+}
+
+.postMeta {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.postMeta h3 {
+    font-size: 12px;
 }
 
 .postBody {
     line-height: 1.8;
+}
+
+.postBody p {
+    margin-bottom: 1rem;
 }

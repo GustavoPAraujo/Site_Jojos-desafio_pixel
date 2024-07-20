@@ -18,6 +18,7 @@ async function getData(slug) {
     }
   }`;
   const post = await client.fetch(query, { slug });
+  console.log(post)
   return post;
 }
 
@@ -35,7 +36,7 @@ const BlogSlug = async ({ params }) => {
         <img src={urlFor(post.mainImage).url()} alt={post.title} className={styles.postImage} />
         <h2 className={styles.postTitle}>{post.title}</h2>
         <div className={styles.postMeta}>
-          <p>Por {post.author.name}, {new Date(post.publishedAt).toLocaleDateString()}</p>
+          <h3>Por {post.author.name}, {new Date(post.publishedAt).toLocaleDateString()}</h3>
         </div>
         <div className={styles.postBody}>
           <PortableText 
