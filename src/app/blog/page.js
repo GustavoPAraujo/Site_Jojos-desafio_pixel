@@ -54,8 +54,8 @@ const Blog = () => {
               <img src={urlFor(highlightedPost.mainImage).url()} alt={highlightedPost.title} className={styles.highlightedPostImage} />
               <div className={styles.highlightedPostContent}>
                 <h2>{highlightedPost.title}</h2>
-                <p>Por {highlightedPost.author.name}, {new Date(highlightedPost.publishedAt).toLocaleDateString()}</p>
-                <PortableText value={highlightedPost.body} className={styles.excerpt} />
+                <h3>Por {highlightedPost.author.name}, {new Date(highlightedPost.publishedAt).toLocaleDateString()}</h3>
+                <PortableText value={highlightedPost.body[0]} className={styles.excerpt} />
               </div>
             </div>
 

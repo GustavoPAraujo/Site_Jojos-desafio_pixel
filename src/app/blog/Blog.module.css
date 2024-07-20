@@ -47,11 +47,15 @@
   }
 
   .highlightedPostContent h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 26px;
   }
 
+  .highlightedPostContent h3 {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
   .highlightedPostContent p {
-    font-size: 10px;
-    margin-bottom: 20px;
+    font-size: 18px;
   }
