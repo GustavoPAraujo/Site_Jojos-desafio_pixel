@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
+import FormSubmit from '@/components/FormSubmit/FormSubmit';
+
 import styles from './Formulario.module.css';
 
 const Formulario = () => {
@@ -90,7 +92,7 @@ const Formulario = () => {
         </form>
 
         {submitted && (
-          <p className={styles.successMessage}>Obrigado por se candidatar!</p>
+          <FormSubmit />
         )}
       </main>
 
