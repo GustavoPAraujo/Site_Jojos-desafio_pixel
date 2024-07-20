@@ -22,7 +22,6 @@ export default function Home() {
         </div>
 
         <div className={styles.sobre}>
-
           <h1>Sobre Nós</h1>
 
           <div className={styles.sobreContent}>
@@ -42,7 +41,7 @@ export default function Home() {
         </div>
 
         <section className={styles.carreira}>
-          <h2>Carreira</h2>
+          <h1>Carreira</h1>
           <div>
             <Link href="/formulario">Desenvolvedor C++ Júnior</Link>
             <Link href="/formulario">Desenvolvedor C++ Pleno</Link>
