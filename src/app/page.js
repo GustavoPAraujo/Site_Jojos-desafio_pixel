@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section className={styles.carreira}>
+        <div className={styles.carreira}>
           <h1>Carreira</h1>
           <div className={styles.vagasGrid}>
             {vagas.map((vaga) => (
@@ -74,7 +74,7 @@ export default function Home() {
               />
             ))}
           </div>
-        </section>
+        </div>
 
       </main>
 
