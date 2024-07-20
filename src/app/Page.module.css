@@ -1,0 +1,17 @@
+.main {
+    flex: 1;
+    padding: 60px;
+    padding-top: 0;
+}
+
+.jogos {
+    height: 400px;
+    margin-bottom: 3rem;
+}
+
+.sobre {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
