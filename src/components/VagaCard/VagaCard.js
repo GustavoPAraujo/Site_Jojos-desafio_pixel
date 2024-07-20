@@ -5,8 +5,8 @@ const VagaCard = ({ title, department, location }) => {
     <div className={styles.card}>
       <h3>{title}</h3>
       <div className={styles.details}>
-        <span className={styles.department}>{department}</span>
-        <span className={styles.location}>{location}</span>
+        <p className={styles.department}>{department}</p>
+        <p className={styles.location}>{location}</p>
       </div>
     </div>
   );
