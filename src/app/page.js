@@ -67,7 +67,8 @@ export default function Home() {
           <div className={styles.vagasGrid}>
             {vagas.map((vaga) => (
               <VagaCard 
-                key={vaga._id} 
+                key={vaga._id}
+                id={vaga._id}	
                 title={vaga.title} 
                 department={vaga.department} 
                 location={vaga.location} 
