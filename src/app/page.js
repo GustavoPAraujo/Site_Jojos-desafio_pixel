@@ -1,11 +1,33 @@
-import Link from 'next/link';
+"use client";
+
+import { useEffect, useState } from 'react';
+import client from '../sanity';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
+import VagaCard from '@/components/VagaCard/VagaCard';
 
 import styles from './Page.module.css';
 
 export default function Home() {
+  const [vagas, setVagas] = useState([]);
+
+  useEffect(() => {
+    const fetchVagas = async () => {
+      const query = `*[_type == "vaga"]{
+        _id,
+        title,
+        department,
+        location
+      }`;
+      const vagas = await client.fetch(query);
+      setVagas(vagas);
+    };
+
+    fetchVagas();
+  }, []);
+
+
   return (
     <div className={styles.pageContainer}>
       <Header />
@@ -42,14 +64,18 @@ export default function Home() {
 
         <section className={styles.carreira}>
           <h1>Carreira</h1>
-          <div>
-            <Link href="/formulario">Desenvolvedor C++ Júnior</Link>
-            <Link href="/formulario">Desenvolvedor C++ Pleno</Link>
-            <Link href="/formulario">Engenheiro de Software</Link>
-            <Link href="/formulario">Artista Técnico</Link>
-            <Link href="/formulario">Representante Comercial</Link>
+          <div className={styles.vagasGrid}>
+            {vagas.map((vaga) => (
+              <VagaCard 
+                key={vaga._id} 
+                title={vaga.title} 
+                department={vaga.department} 
+                location={vaga.location} 
+              />
+            ))}
           </div>
         </section>
+
       </main>
 
       <Footer />
