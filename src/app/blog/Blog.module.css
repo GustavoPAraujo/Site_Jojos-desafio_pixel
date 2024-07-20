@@ -1,61 +1,61 @@
 .pageContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main {
-    flex: 1;
-    padding: 60px;
-    padding-top: 0;
+  flex: 1;
+  padding: 60px;
+  padding-top: 0;
 }
 
 .blogTitle {
-    text-align: center;
-    margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .postsGrid {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1300px;
-    gap: 20px;
-    justify-content: flex-start;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  gap: 20px;
+  justify-content: flex-start;
+  margin: 0 auto;
 }
 
 .highlightedPost {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 
-  }
+}
 
-  .highlightedPostImage {
-    width: 600px;
-    height: auto;
-    object-fit: cover;
-  }
+.highlightedPostImage {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+}
 
-  .highlightedPostContent {
-    padding: 20px;
-    text-align: left;
-  }
+.highlightedPostContent {
+  padding: 20px;
+  text-align: left;
+}
 
-  .highlightedPostContent h2 {
-    margin-bottom: 30px;
-    font-size: 26px;
-  }
+.highlightedPostContent h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+}
 
-  .highlightedPostContent h3 {
-    font-size: 12px;
-    margin-bottom: 30px;
-  }
+.highlightedPostContent h3 {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
 
-  .highlightedPostContent p {
-    font-size: 18px;
-  }
+.highlightedPostContent p {
+  font-size: 18px;
+}
