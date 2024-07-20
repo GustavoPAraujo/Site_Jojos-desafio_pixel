@@ -3,6 +3,7 @@
 import client, { urlFor } from '../../sanity';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { PortableText } from '@portabletext/react';
 
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
@@ -20,6 +21,7 @@ const Blog = () => {
         title,
         slug,
         mainImage,
+        body,
         author->{
           name
         },
@@ -29,6 +31,7 @@ const Blog = () => {
       setPosts(posts);
       if (posts.length > 0) {
         setHighlightedPost(posts[0]);
+        console.log(posts[0]);
       }
     };
 
@@ -52,6 +55,7 @@ const Blog = () => {
               <div className={styles.highlightedPostContent}>
                 <h2>{highlightedPost.title}</h2>
                 <p>Por {highlightedPost.author.name}, {new Date(highlightedPost.publishedAt).toLocaleDateString()}</p>
+                <PortableText value={highlightedPost.body} className={styles.excerpt} />
               </div>
             </div>
 
