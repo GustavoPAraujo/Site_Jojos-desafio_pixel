@@ -36,12 +36,14 @@ export default function Home() {
       <main className={styles.main}>
 
         <div className={styles.jogos}>
-          <Image src="/pacman.png" alt="Pacman" width={400} height={300} />
-          <div>
 
-            <Image src="/pacman.png" alt="Pacman" width={400} height={300} />
-            <Image src="/tetris.png" alt="Tetris" width={400} height={300} />
-            <Image src="/spaceInvaders.png" alt="Space Invaders" width={400} height={300} />
+          <Image src="/pacman.png" alt="Pacman" className={styles.mainGame} width={400} height={300} />
+
+          <div className={styles.jogosContent}>
+
+            <Image src="/pacman.png" alt="Pacman" width={300} height={225} />
+            <Image src="/tetris.png" alt="Tetris" width={300} height={225} />
+            <Image src="/spaceInvaders.png" alt="Space Invaders" width={300} height={225} />
 
           </div>
         </div>
