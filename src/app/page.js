@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import client from '../sanity';
+import Image from 'next/image';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
@@ -35,11 +36,13 @@ export default function Home() {
       <main className={styles.main}>
 
         <div className={styles.jogos}>
-          <img src="..." alt="Pacman" />
+          <Image src="/pacman.png" alt="Pacman" width={400} height={300} />
           <div>
-            <img src="..." alt="Pacman" />
-            <img src="..." alt="Tetris" />
-            <img src="..." alt="Jogo da nave" />
+
+            <Image src="/pacman.png" alt="Pacman" width={400} height={300} />
+            <Image src="/tetris.png" alt="Tetris" width={400} height={300} />
+            <Image src="/spaceInvaders.png" alt="Space Invaders" width={400} height={300} />
+
           </div>
         </div>
 
@@ -66,12 +69,12 @@ export default function Home() {
           <h1>Carreira</h1>
           <div className={styles.vagasGrid}>
             {vagas.map((vaga) => (
-              <VagaCard 
+              <VagaCard
                 key={vaga._id}
-                id={vaga._id}	
-                title={vaga.title} 
-                department={vaga.department} 
-                location={vaga.location} 
+                id={vaga._id}
+                title={vaga.title}
+                department={vaga.department}
+                location={vaga.location}
               />
             ))}
           </div>
