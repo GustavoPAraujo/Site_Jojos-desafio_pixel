@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 import styles from './GameCard.module.css';
 
-const GameCard = ({ key, game, image, title }) => {
+const GameCard = ({ game }) => {
     return (
-        <Link href={`/jogos/${game.slug}`} key={key}>
+        <Link href={`/jogos/${game.slug}`} >
             <div className={styles.card}>
-                <Image src={image} alt={title} className={styles.image} width={360} height={300} />
+                <Image src={game.image} alt={game.title} className={styles.image} width={360} height={300} />
             </div>
         </Link>
     )

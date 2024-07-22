@@ -55,8 +55,6 @@ export default function Home() {
               <GameCard
                 game={game}
                 key={game.slug}
-                title={game.title}
-                image={game.image}
               />
             ))}
 

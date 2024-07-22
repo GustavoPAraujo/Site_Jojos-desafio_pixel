@@ -1,9 +1,7 @@
 import client, { urlFor } from '../../../sanity';
 import { useRouter } from 'next/router';
-
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
-
 
 const GameDetail = ({ game }) => {
   const router = useRouter();
@@ -14,7 +12,6 @@ const GameDetail = ({ game }) => {
   return (
     <div>
       <Header />
-
       <main>
         <h1>{game.title}</h1>
         <img src={urlFor(game.mainImage).url()} alt={game.title} />
@@ -22,7 +19,6 @@ const GameDetail = ({ game }) => {
         <button>Comprar</button>
         <div>{game.description}</div>
       </main>
-
       <Footer />
     </div>
   );
