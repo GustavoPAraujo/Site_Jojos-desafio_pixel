@@ -60,7 +60,7 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-        <div className={styles.jogos}>
+        <div id='jogos' className={styles.jogos}>
 
           {highlightedGame && (
 
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.sobre}>
+        <div id='sobre' className={styles.sobre}>
           <h1>Sobre Nós</h1>
 
           <div className={styles.sobreContent}>
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.carreira}>
+        <div id='formulario' className={styles.carreira}>
           <h1>Carreira</h1>
           <div className={styles.vagasGrid}>
             {vagas.map((vaga) => (
