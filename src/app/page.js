@@ -41,19 +41,21 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-
         <div className={styles.jogos}>
 
           <Image src="/pacman.png" alt="Pacman" className={styles.mainGame} width={400} height={300} />
 
-          {games.map((game) => (
-            <GameCard
-              game={game}
-              key={game.slug}
-              title={game.title}
-              image={game.image}
-            />
-          ))}
+          <div className={styles.jogosContent}>
+            {games.map((game) => (
+              <GameCard
+                game={game}
+                key={game.slug}
+                title={game.title}
+                image={game.image}
+              />
+            ))}
+
+          </div>
         </div>
 
         <div className={styles.sobre}>
