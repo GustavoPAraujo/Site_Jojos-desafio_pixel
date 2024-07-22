@@ -9,16 +9,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px;
+    padding: 10rem;
+    padding-top: 1rem;
     margin: 0 auto;
+  }
+
+  .main h1 {
+    margin-bottom: 3rem;
   }
   
   .gameImage {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 4rem;
   }
   
   .gameMeta {
@@ -32,16 +37,15 @@
   .buyButton {
     padding: 10px 20px;
     font-size: 1rem;
-    background-color: #FFA500; /* Fundo laranja */
-    color: #000000; /* Texto preto */
-    border: none;
+    background-color: #FA8400;
+    color: #023047;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .buyButton:hover {
-    background-color: #CC8400;
+    background-color: #fa8500cb;
   }
   
   .gameDescription {
