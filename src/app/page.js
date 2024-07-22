@@ -17,7 +17,7 @@ export default function Home() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    const fetchgames = async () => {
+    const fetchGames = async () => {
       const query = `*[_type == "game"]{
         _id,
         name,
@@ -27,10 +27,11 @@ export default function Home() {
         price
       }`;
       const games = await client.fetch(query);
+      console.log(games)
       setGames(games);
     };
 
-    fetchVagas();
+    fetchGames();
   }, []);
 
 
@@ -66,8 +67,9 @@ export default function Home() {
           <div className={styles.jogosContent}>
             {games.map((game) => (
               <GameCard
+                key={game._id}
                 game={game}
-                key={game.slug}
+                image={game.image}
               />
             ))}
 
