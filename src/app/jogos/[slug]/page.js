@@ -1,5 +1,6 @@
 import client, { urlFor } from '../../../sanity';
 import Image from 'next/image';
+import { PortableText } from '@portabletext/react';
 
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';

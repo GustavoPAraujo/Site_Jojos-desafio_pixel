@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  
-  .main {
+}
+
+.main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -12,29 +12,30 @@
     padding: 10rem;
     padding-top: 1rem;
     margin: 0 auto;
-  }
+}
 
-  .main h1 {
+.main h1 {
     margin-bottom: 3rem;
-  }
-  
-  .gameImage {
+}
+
+.gameImage {
     width: 100%;
     max-width: 1000px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 4rem;
-  }
-  
-  .gameMeta {
+}
+
+.gameMeta {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 1rem;
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-  }
-  
-  .buyButton {
+}
+
+.buyButton {
     padding: 10px 20px;
     font-size: 1rem;
     background-color: #FA8400;
@@ -42,15 +43,14 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .buyButton:hover {
+}
+
+.buyButton:hover {
     background-color: #fa8500cb;
-  }
-  
-  .gameDescription {
+}
+
+.gameDescription {
     font-size: 1rem;
     line-height: 1.6;
     color: #ffffff;
-  }
-  
+}
