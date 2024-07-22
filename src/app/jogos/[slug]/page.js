@@ -6,17 +6,15 @@ import Footer from '@/components/Footer/Footer';
 
 import styles from './JogosSlug.module.css';
 
-// Função para buscar os dados do jogo
 async function getData(slug) {
   const query = `*[_type == "game" && slug.current == $slug][0]{
-    title,
+    name,
     slug,
-    mainImage,
+    image,
     price,
     description
   }`;
   const game = await client.fetch(query, { slug });
-  console.log(game);
   return game;
 }
 
@@ -31,17 +29,15 @@ const GameSlug = async ({ params }) => {
     <div className={styles.pageContainer}>
       <Header />
       <main className={styles.main}>
-        <h1>{game.title}</h1>
-        <Image src={game.image} alt={game.title} className={styles.gameImage} />
-
+        <h1>{game.name}</h1>
+        <Image src={urlFor(game.image).url()} alt={game.name} className={styles.gameImage} width={800} height={600} />
         <div className={styles.gameMeta}>
-          <p>Valor: R$ {game.price}</p>
+          <p>Valor: R$ {game.price.toFixed(2)}</p>
           <button className={styles.buyButton}>Comprar</button>
         </div>
         <div className={styles.gameDescription}>
           <p>{game.description}</p>
         </div>
-
       </main>
       <Footer />
     </div>
