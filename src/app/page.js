@@ -14,12 +14,25 @@ import styles from './Page.module.css';
 
 export default function Home() {
   const [vagas, setVagas] = useState([]);
+  const [games, setGames] = useState([]);
 
-  const games = [
-    { slug: 'pacman', title: 'Pacman', image: '/pacman.png' },
-    { slug: 'tetris', title: 'Tetris', image: '/tetris.png' },
-    { slug: 'space-invaders', title: 'Space Invaders', image: '/spaceInvaders.png' },
-  ];
+  useEffect(() => {
+    const fetchgames = async () => {
+      const query = `*[_type == "game"]{
+        _id,
+        name,
+        slug,
+        image,
+        description,
+        price
+      }`;
+      const games = await client.fetch(query);
+      setGames(games);
+    };
+
+    fetchVagas();
+  }, []);
+
 
   useEffect(() => {
     const fetchVagas = async () => {
