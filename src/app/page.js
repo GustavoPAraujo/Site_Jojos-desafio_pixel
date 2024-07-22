@@ -44,12 +44,12 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.jogos}>
 
-          <Link href="/jogos/pacman">
-            <div className={styles.mainGame}>
-              <Image src="/pacman.png" alt="Pacman" className={styles.Image} width={1240} height={400} />
-            </div>
-          </Link>
-            
+          <div className={styles.mainGame}>
+            <Link href="/jogos/pacman">
+              <Image src="/pacman.png" alt="Pacman" className={styles.Image} width={1120} height={400} />
+            </Link>
+          </div>
+
           <div className={styles.jogosContent}>
             {games.map((game) => (
               <GameCard
