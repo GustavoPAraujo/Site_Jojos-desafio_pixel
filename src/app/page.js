@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import client from '../sanity';
 import Image from 'next/image';
 import Link from 'next/link';
+import { urlFor } from '../sanity';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
@@ -15,6 +16,7 @@ import styles from './Page.module.css';
 export default function Home() {
   const [vagas, setVagas] = useState([]);
   const [games, setGames] = useState([]);
+  const [highlightedGame, setHighlightedGame] = useState(null);
 
   useEffect(() => {
     const fetchGames = async () => {
@@ -29,6 +31,10 @@ export default function Home() {
       const games = await client.fetch(query);
       console.log(games)
       setGames(games);
+      if (games.length > 0) {
+        setHighlightedGame(games[0]);
+        console.log(games[0]);
+      }
     };
 
     fetchGames();
@@ -58,11 +64,19 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.jogos}>
 
-          <div className={styles.mainGame}>
-            <Link href="/jogos/pacman">
-              <Image src="/pacman.png" alt="Pacman" className={styles.Image} width={1120} height={400} />
-            </Link>
-          </div>
+          {highlightedGame && (
+
+            <div className={styles.mainGame}>
+              <Link href={`/jogos/${highlightedGame.slug.current}`}>
+                <Image
+                      src={urlFor(highlightedGame.image).url()}
+                      alt={highlightedGame.title}
+                      className={styles.Image}
+                      width={1120} height={400}
+                />
+              </Link>
+            </div>
+            )}
 
           <div className={styles.jogosContent}>
             {games.map((game) => (
