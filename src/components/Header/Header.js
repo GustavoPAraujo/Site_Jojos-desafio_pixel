@@ -20,10 +20,10 @@ const Header = () => {
         </Link>
       </div>
       <nav className={styles.nav}>
-        <Link href="#jogos" className={styles.navLink}>Jogos</Link>
-        <Link href="#sobre" className={styles.navLink}>Sobre</Link>
+        <Link href="/" className={styles.navLink}>Jogos</Link>
+        <Link href="/#sobre" className={styles.navLink}>Sobre</Link>
         <Link href="/blog" className={styles.navLink}>Blog</Link>
-        <Link href="#formulario" className={styles.navLink}>Carreira</Link>
+        <Link href="/#formulario" className={styles.navLink}>Carreira</Link>
       </nav>
     </header>
   );
