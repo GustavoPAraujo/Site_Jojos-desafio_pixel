@@ -7,11 +7,18 @@ import Image from 'next/image';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import VagaCard from '@/components/VagaCard/VagaCard';
+import GameCard from '@/components/GameCard/GameCard';
 
 import styles from './Page.module.css';
 
 export default function Home() {
   const [vagas, setVagas] = useState([]);
+
+  const games = [
+    { slug: 'pacman', title: 'Pacman', image: '/pacman.png' },
+    { slug: 'tetris', title: 'Tetris', image: '/tetris.png' },
+    { slug: 'space-invaders', title: 'Space Invaders', image: '/spaceInvaders.png' },
+  ];
 
   useEffect(() => {
     const fetchVagas = async () => {
@@ -39,13 +46,14 @@ export default function Home() {
 
           <Image src="/pacman.png" alt="Pacman" className={styles.mainGame} width={400} height={300} />
 
-          <div className={styles.jogosContent}>
-
-            <Image src="/pacman.png" alt="Pacman" width={300} height={225} />
-            <Image src="/tetris.png" alt="Tetris" width={300} height={225} />
-            <Image src="/spaceInvaders.png" alt="Space Invaders" width={300} height={225} />
-
-          </div>
+          {games.map((game) => (
+            <GameCard
+              game={game}
+              key={game.slug}
+              title={game.title}
+              image={game.image}
+            />
+          ))}
         </div>
 
         <div className={styles.sobre}>
