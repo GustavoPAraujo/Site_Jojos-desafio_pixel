@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import client from '../sanity';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
@@ -43,8 +44,12 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.jogos}>
 
-          <Image src="/pacman.png" alt="Pacman" className={styles.mainGame} width={400} height={300} />
-
+          <Link href="/jogos/pacman">
+            <div className={styles.mainGame}>
+              <Image src="/pacman.png" alt="Pacman" className={styles.Image} width={1240} height={400} />
+            </div>
+          </Link>
+            
           <div className={styles.jogosContent}>
             {games.map((game) => (
               <GameCard
