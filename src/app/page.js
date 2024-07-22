@@ -29,11 +29,9 @@ export default function Home() {
         price
       }`;
       const games = await client.fetch(query);
-      console.log(games)
       setGames(games);
       if (games.length > 0) {
         setHighlightedGame(games[0]);
-        console.log(games[0]);
       }
     };
 
