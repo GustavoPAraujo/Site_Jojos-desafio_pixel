@@ -15,28 +15,41 @@
     margin-bottom: 5rem;
 }
 
-.mainGame {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    transition: transform 0.2s ease-in-out;
+/* Imagem do jogo em destaque */
+.imageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    height: 0;
+    padding-bottom: 35.7%; /* Proporção baseada no tamanho desejado (400px / 1120px) */
+    margin: 0 auto;
 }
 
-.Image {
+.image {
+    object-fit: cover;
     border-radius: 15px;
 }
 
-.mainGame:hover {
-    transform: scale(1.05);
-}
-
-
+/* Grid de jogos */
 .jogosContent {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     margin: 0 auto;
+}
+
+.jogosContent img {
+    width: 100%;
+    max-width: 400px; /* Aumenta o tamanho das imagens dos jogos */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.jogosContent img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
 }
 
 .sobre {
@@ -47,7 +60,7 @@
 }
 
 .sobre h1 {
-    margin-bottom: 2rem ;
+    margin-bottom: 2rem;
 }
 
 .sobreContent {

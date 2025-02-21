@@ -60,31 +60,14 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-        <div id='jogos' className={styles.jogos}>
-
-          {highlightedGame && (
-
-            <div className={styles.mainGame}>
-              <Link href={`/jogos/${highlightedGame.slug.current}`}>
-                <Image
-                      src={urlFor(highlightedGame.image).url()}
-                      alt={highlightedGame.title}
-                      className={styles.Image}
-                      width={1120} height={400}
-                />
-              </Link>
-            </div>
-            )}
+        <div id="jogos" className={styles.jogos}>
 
           <div className={styles.jogosContent}>
             {games.map((game) => (
-              <GameCard
-                key={game._id}
-                game={game}
-              />
+              <GameCard key={game._id} game={game} />
             ))}
-
           </div>
+
         </div>
 
         <div id='sobre' className={styles.sobre}>
