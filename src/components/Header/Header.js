@@ -8,7 +8,7 @@ const Header = () => {
       <div className={styles.logo}>
         <Link href="/">
           <div className={styles.logoContent}>
-            <Image src="/icon.png" alt="JOJOS Logo" width={72} height={50} />
+            <Image src="/Icon.png" alt="JOJOS Logo" width={72} height={50} />
             <h1>
               <span className={styles.letter1}>J</span>
               <span className={styles.letter2}>O</span>
